@@ -122,6 +122,61 @@ footer {
   font-size: 0.85rem; color: rgba(255,255,255,0.45);
 }
 
+/* === CUSTOM STEPS SECTION === */
+.custom-steps-section {
+  background: var(--secondary);
+  padding: 70px 20px;
+}
+.custom-steps-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.custom-steps-text h2 {
+  color: white;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+.custom-steps-text p {
+  color: rgba(255,255,255,0.75);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+.btn-primary-gold {
+  display: inline-block;
+  background: var(--primary);
+  color: white;
+  padding: 14px 30px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.2s;
+}
+.btn-primary-gold:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}
+.custom-steps-video video {
+  width: 100%;
+  border-radius: 16px;
+  display: block;
+  max-height: 480px;
+  object-fit: cover;
+}
+@media (max-width: 768px) {
+  .custom-steps-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .custom-steps-text h2 { font-size: 1.6rem; }
+}
+
 /* === MOBILE STICKY BOTTOM CTA BAR === */
 .mobile-cta-bar {
   display: none;

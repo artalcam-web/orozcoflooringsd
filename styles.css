@@ -121,3 +121,40 @@ footer {
   padding-top: 25px; text-align: center;
   font-size: 0.85rem; color: rgba(255,255,255,0.45);
 }
+
+/* === MOBILE STICKY BOTTOM CTA BAR === */
+.mobile-cta-bar {
+  display: none;
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  z-index: 9999;
+  background: #ffffff;
+  border-top: 1px solid #e5e7eb;
+  box-shadow: 0 -4px 16px rgba(0,0,0,0.13);
+  padding: 10px 14px;
+  gap: 10px;
+}
+.mobile-cta-bar a {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 13px 8px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  color: white;
+  min-height: 50px;
+  transition: opacity 0.2s;
+}
+.mobile-cta-bar a:active { opacity: 0.85; }
+.mobile-cta-bar .mob-wa { background: #25D366; }
+.mobile-cta-bar .mob-call { background: linear-gradient(135deg, var(--primary), var(--accent)); }
+.mobile-cta-bar i { font-size: 1.1rem; }
+
+@media (max-width: 600px) {
+  .mobile-cta-bar { display: flex; }
+  body { padding-bottom: 74px; }
+}

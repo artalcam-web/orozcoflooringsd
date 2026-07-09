@@ -125,15 +125,23 @@ footer {
 /* === CUSTOM STEPS SECTION === */
 .custom-steps-section {
   background: var(--secondary);
-  padding: 70px 20px;
+  padding: 0 0 60px 0;
 }
-.custom-steps-inner {
-  max-width: 1100px;
+.custom-steps-video-wrap {
+  width: 100%;
+  line-height: 0;
+}
+.custom-steps-video-wrap video {
+  width: 100%;
+  display: block;
+  max-height: 520px;
+  object-fit: cover;
+}
+.custom-steps-text {
+  max-width: 760px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
+  padding: 48px 20px 0 20px;
+  text-align: center;
 }
 .custom-steps-text h2 {
   color: white;
@@ -162,18 +170,7 @@ footer {
   background: var(--primary-dark);
   transform: translateY(-2px);
 }
-.custom-steps-video video {
-  width: 100%;
-  border-radius: 16px;
-  display: block;
-  max-height: 480px;
-  object-fit: cover;
-}
-@media (max-width: 768px) {
-  .custom-steps-inner {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
+@media (max-width: 600px) {
   .custom-steps-text h2 { font-size: 1.6rem; }
 }
 

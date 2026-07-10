@@ -152,6 +152,32 @@
     .why-card p { font-size: 0.93rem; color: #6b7280; line-height: 1.6; }
 
     /* BEFORE/AFTER GALLERY */
+    /* BEFORE / AFTER */
+    .ba-section { padding: 70px 24px; background: #fff; }
+    .ba-section h2 { text-align: center; font-size: 1.9rem; font-weight: 800; color: #1f2937; margin-bottom: 10px; }
+    .ba-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 12px; max-width: 900px; margin: 40px auto 0;
+    }
+    @media (max-width: 500px) { .ba-grid { grid-template-columns: 1fr; } }
+    .ba-item { position: relative; border-radius: 18px; overflow: hidden; aspect-ratio: 1; }
+    .ba-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .ba-label {
+      position: absolute; bottom: 16px; left: 16px;
+      font-size: 0.85rem; font-weight: 800; letter-spacing: 1px; text-transform: uppercase;
+      padding: 7px 16px; border-radius: 20px;
+    }
+    .ba-label.before { background: rgba(0,0,0,0.55); color: rgba(255,255,255,0.8); }
+    .ba-label.after  { background: var(--primary); color: white; }
+    .ba-arrow {
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2rem; color: #d1d5db;
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%,-50%);
+      pointer-events: none;
+    }
+    @media (max-width: 500px) { .ba-arrow { display: none; } }
+
     .gallery-section { padding: 70px 24px; background: #f9fafb; }
     .gallery-section h2 {
       text-align: center; font-size: 1.9rem; font-weight: 800;
@@ -365,6 +391,25 @@
       <h3>Licensed & Insured</h3>
       <p>Family-owned, licensed, bonded, and insured. We've done this for homeowners, flippers, and agents across San Diego.</p>
     </div>
+  </div>
+</section>
+
+<!-- BEFORE / AFTER -->
+<section class="ba-section">
+  <h2>Before &amp; After</h2>
+  <p class="section-sub">The difference a new floor makes — same room, same light.</p>
+  <div style="position:relative; max-width:900px; margin:40px auto 0;">
+    <div class="ba-grid">
+      <div class="ba-item">
+        <img src="/images/carousel/c1p1.jpg" alt="Before — old flooring">
+        <span class="ba-label before">Before</span>
+      </div>
+      <div class="ba-item">
+        <img src="/images/carousel/c1p5.jpg" alt="After — new LVP flooring by Orozco Flooring">
+        <span class="ba-label after">After ✓</span>
+      </div>
+    </div>
+    <div class="ba-arrow">→</div>
   </div>
 </section>
 
